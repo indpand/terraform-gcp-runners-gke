@@ -22,17 +22,17 @@ spec:
                 secretKeyRef:
                   name: runner-k8s-config
                   key: repo_url
-            - name: GITHUB_TOKEN
+            - name: ${{secrets.TOKEN}}
               valueFrom:
                 secretKeyRef:
                   name: runner-k8s-config
                   key: gh_token
-            - name: REPO_OWNER
+            - name: indpand
               valueFrom:
                 secretKeyRef:
                   name: runner-k8s-config
-                  key: repo_owner
-            - name: REPO_NAME
+                  key: indpand
+            - name: terraform-gcp-runners-gke
               valueFrom:
                 secretKeyRef:
                   name: runner-k8s-config
